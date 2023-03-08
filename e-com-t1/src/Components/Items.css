@@ -1,0 +1,28 @@
+
+
+.Item_view{
+    height: 421px;
+    width: 286px;
+    margin-left: 73px;
+    margin-top: 20px;
+    background-color:#2E2D2D ;
+}
+
+.Image{
+    height: 326px;
+    width: 286px;
+}
+
+.Item_name{
+    color: white;
+    height: 54px;
+    max-width: 188px;
+    padding-left: 10px;
+    margin-top: 0;
+
+}
+
+.Item_view:hover{
+    box-shadow: -10px 20px 5px 5px #424141;
+}
+

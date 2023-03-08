@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap');
+
+body{
+  background-color: #858585;
+  margin: 0;
+  font-family:'Jost' ;
+}
+
+.NavBar{
+  background-color: #D9D9D9;
+  height: 150px;
+  overflow:hidden;
+}
+.Title{
+  font-size: 50px;
+  padding-left: 59px;
+  padding-left: 51px;
+  color: black;
+}
+
+.Item-types{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 43px;
+  color: #FFFFFF;
+  padding-left: 32px;
+  padding-top: 75px;
+}
+
+.Item-container{
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
