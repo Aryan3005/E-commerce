@@ -9,8 +9,19 @@ function Item_view(props) {
 
     return(
         <div className="Item_view">
-        <img src={i} alt="Not Found"></img>
-        <p className='Item_name'>Letter And Bear Graphic Tee</p>
+
+            <img src={i} alt="Not Found" className='Item_Image'></img>
+            <a href="Item_id_main_page">
+            <p className='Item_name'>Letter And Bear Graphic Tee</p>
+            </a>
+            <div className='Price_view'>
+                <p className='Item_price'>GBP 10</p>
+                <div className='Content_btns'>
+                    <button className='Add_cart_btn hov'>Add to cart</button>
+                    <button className='Buy_btn hov'>Buy</button>
+                </div>
+            </div>
+
         </div>
     )
 

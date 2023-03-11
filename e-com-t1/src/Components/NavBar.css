@@ -1,0 +1,58 @@
+.NavBar{
+    background-color: #D9D9D9;
+    height: 150px;
+    overflow:hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  
+  .Title{
+    font-size: 50px;
+    margin-left: 50px;
+    color: black;
+    cursor: pointer;
+  }
+
+  .NavBar_Icons{
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+  }
+  
+  .Cart_image{
+    max-height: 40px;
+    max-width: 90px;
+    margin-right: 40px;
+    margin-top: 60px;
+  
+  }
+  .User_image{
+    max-height: 40px;
+    max-width: 90px;
+    margin-right: 40px;
+    margin-top: 60px;
+  }
+
+  .Cart_image:hover{
+    transform: scale(1.1);
+  }
+  
+  .User_image:hover{
+    transform: scale(1.1);
+  }
+
+  @media only screen and (max-width: 450px) {
+    .Title {
+      margin-left: 10px;
+      margin-right: 20px;
+    }
+    .NavBar_Icons{
+      margin-right: 0px;
+    }
+    .Cart_image{
+      margin-right: 10px;
+    }
+  
+  }
+  

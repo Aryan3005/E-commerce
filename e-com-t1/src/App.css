@@ -6,17 +6,7 @@ body{
   font-family:'Jost' ;
 }
 
-.NavBar{
-  background-color: #D9D9D9;
-  height: 150px;
-  overflow:hidden;
-}
-.Title{
-  font-size: 50px;
-  padding-left: 59px;
-  padding-left: 51px;
-  color: black;
-}
+
 
 .Item-types{
   font-style: normal;
@@ -25,13 +15,15 @@ body{
   line-height: 43px;
   color: #FFFFFF;
   padding-left: 32px;
-  padding-top: 75px;
+  padding-top: 55px;
 }
 
 .Item-container{
   display: flex;
   flex-direction: row;
   overflow-x: auto;
+  overflow-y: hidden;
   padding-bottom: 20px;
+  cursor: pointer;
 }
 
