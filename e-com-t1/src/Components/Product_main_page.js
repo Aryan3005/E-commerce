@@ -26,6 +26,10 @@ function Productmainpage(props){
     <NavBarComponent/>
     <img src={props.data.thumbnail_url} alt="loading" className='p_Image'></img>
     <h1>{product_data.sync_variants[0].retail_price}</h1>
+    <ul>
+    {product_data.sync_variants.map(i => <li>{i.name} &nbsp; &nbsp; price: {i.retail_price}</li>)}
+    </ul>
+    <p></p>
     </div>
     )
 }

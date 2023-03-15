@@ -10,6 +10,8 @@
 .Item_Image{
     height: 326px;
     width: 286px;
+    object-fit: cover;
+
 }
 
 .Price_view{
