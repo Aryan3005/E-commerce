@@ -2,13 +2,10 @@ import requests as rq
 from flask import Flask, jsonify
 import firebase_admin
 from firebase_admin import firestore
+import os
 
 
-#https://api.printful.com/
-#https://api.printful.com/store/products
-#'Authorization': 'Bearer khpaNGaiMdiwtWKQyHcIjq421UCMiw4qHJWYUYTb'
-
-cred_obj = firebase_admin.credentials.Certificate('/Users/kaival/Desktop/ai/Fashion mnist/e-com-ti-firebase-adminsdk-83ps5-820ac1e4ca.json')
+cred_obj = firebase_admin.credentials.Certificate('/Users/kaival/Documents/GitHub/E-commerce/e-com-ti-firebase-adminsdk-83ps5-820ac1e4ca.json')
 default_app = firebase_admin.initialize_app(cred_obj, {
 	'databaseURL':"https://e-com-ti-default-rtdb.europe-west1.firebasedatabase.app"
 	})
