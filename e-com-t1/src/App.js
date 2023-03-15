@@ -4,23 +4,16 @@ import './App.css'; import Item from './Components/Items';
 import { useState } from 'react'; 
 import { initializeApp } from "firebase/app"; 
 import { getFirestore } from "firebase/firestore"; 
-import { getAnalytics } from "firebase/analytics"; 
-import NavBarComponent from './Components/NavBar' 
+//import { getAnalytics } from "firebase/analytics"; 
+import NavBarComponent from './Components/NavBar';
+import Productmainpage from './Components/Product_main_page';
 import { doc, getDoc } from "firebase/firestore"; 
+import {firebaseConfig} from './Firebaseconfig'
 
-const firebaseConfig = { 
-  apiKey: "AIzaSyDFNgbvMK16101ygeQksKe7YTw8Wc78bng", 
-  authDomain: "e-com-ti.firebaseapp.com", 
-  databaseURL: "https://e-com-ti-default-rtdb.europe-west1.firebasedatabase.app", 
-  projectId: "e-com-ti", storageBucket: "e-com-ti.appspot.com", 
-  messagingSenderId: "740384603849", 
-  appId: "1:740384603849:web:9d471bb5c5fa115a55d718", 
-  measurementId: "G-6K2MNFTDHS" 
-}; 
-  
-  const app = initializeApp(firebaseConfig); 
-  const analytics = getAnalytics(app); 
-  const db = getFirestore(app); 
+
+const app = initializeApp(firebaseConfig); 
+//const analytics = getAnalytics(app); 
+const db = getFirestore(app); 
 
 function App() { 
 
@@ -36,8 +29,8 @@ function App() {
     <BrowserRouter> 
       <Routes>
          <Route index element={<LandingPage data={firestore_data}/>} /> 
-         <Route path="Item_id_main_page" element={<NavBarComponent />} /> 
-         <Route path="*" element={<NavBarComponent />} /> 
+         {firestore_data.map(dta => <Route key={dta.id} path={`/${dta.id}`} element={<Productmainpage data={dta}/>}/>)}
+         <Route path="*" element={<div>ERROR page not found</div>} /> 
       </Routes>
     </BrowserRouter> ) 
 }
@@ -52,7 +45,6 @@ function LandingPage(props)
   <div className="Item-types"> Trending </div> 
   <div className="Item-container">
     {props.data.map(indi_product => <Item key={indi_product.id} data={indi_product}/>)}
-    
   </div> 
   </div> ); 
 }
