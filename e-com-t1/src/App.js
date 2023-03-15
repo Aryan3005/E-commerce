@@ -43,8 +43,7 @@ function App() {
 }
 
 export default App; 
-//khpaNGaiMdiwtWKQyHcIjq421UCMiw4qHJWYUYTb 
-//printfull 
+
 
 function LandingPage(props) 
 { 
