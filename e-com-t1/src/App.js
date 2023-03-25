@@ -41,8 +41,11 @@ export default App;
 function LandingPage(props) 
 { 
   return ( 
-  <div className="Body"> <NavBarComponent/> 
-  <div className="Item-types"> Trending </div> 
+  <div className="Body"> 
+  <NavBarComponent/> 
+  <div className="Item-types"> 
+  Trending 
+  </div> 
   <div className="Item-container">
     {props.data.map(indi_product => <Item key={indi_product.id} data={indi_product}/>)}
   </div> 
