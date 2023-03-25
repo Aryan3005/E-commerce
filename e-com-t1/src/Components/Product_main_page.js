@@ -51,12 +51,13 @@ function Productmainpage(props){
             className='p_Image'>
         </img>
         <div className='indi_p_details'>
-        <h1 className='indi_p_price'>€{Price}</h1>
-        <h1>{props.data.name}</h1>
-        <select className='indin_p_drop_list' name="p_variants" onChange={handleChangePrice}> 
-            {product_variants.map(i => <option key={i.name} value={i.name} >{i.name}</option>)} 
-        </select>
+            <h1 className='indi_p_price no_selec'>€{Price}</h1>
+            <h1 className='no_selec'>{props.data.name}</h1>
+            <select className='indin_p_drop_list' name="p_variants" onChange={handleChangePrice}> 
+                {product_variants.map(i => <option key={i.name} value={i.name} >{i.name}</option>)} 
+            </select>
         </div>
+        <div></div>
     </div>
     </div>
     )

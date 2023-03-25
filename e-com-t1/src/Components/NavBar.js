@@ -12,8 +12,12 @@ function NavBarComponent(){
           <p className="Title">ModaMall</p>
           </a>
           <div className='NavBar_Icons'>
-          <img src={Cart_image} alt="not found" className='Cart_image'/>
-          <img src={User_image} alt="not found" className='User_image'/>
+          <a href="/Cart" className='Cart_image'>
+          <img src={Cart_image} alt="not found" className="img_nav"/>
+          </a>
+          <a href="/User" className='User_image'>
+          <img src={User_image} alt="not found" className="img_nav"/>
+          </a>
           </div>
         </div>
 

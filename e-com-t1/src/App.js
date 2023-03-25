@@ -6,6 +6,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"; 
 //import { getAnalytics } from "firebase/analytics"; 
 import NavBarComponent from './Components/NavBar';
+import Cart from "./Components/Cart"
 import Productmainpage from './Components/Product_main_page';
 import { doc, getDoc } from "firebase/firestore"; 
 import {firebaseConfig} from './Firebaseconfig'
@@ -30,7 +31,8 @@ function App() {
       <Routes>
          <Route index element={<LandingPage data={firestore_data}/>} /> 
          {firestore_data.map(dta => <Route key={dta.id} path={`/${dta.id}`} element={<Productmainpage data={dta}/>}/>)}
-         <Route path="*" element={<div>ERROR page not found</div>} /> 
+         <Route path="*" element={<div><NavBarComponent/>ERROR page not found</div>} /> 
+         <Route path="/Cart" element={<Cart/>} /> 
       </Routes>
     </BrowserRouter> ) 
 }
@@ -46,7 +48,7 @@ function LandingPage(props)
   <div className="Item-types"> 
   Trending 
   </div> 
-  <div className="Item-container">
+  <div className="Item-container no_selec">
     {props.data.map(indi_product => <Item key={indi_product.id} data={indi_product}/>)}
   </div> 
   </div> ); 
