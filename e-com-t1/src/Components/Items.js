@@ -5,6 +5,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { useState , useEffect } from 'react'; 
 import {firebaseConfig} from "../Firebaseconfig"
 import './Items.css' 
+import "./Cart"
 
 const app=initializeApp(firebaseConfig)
 const db=getFirestore(app)
@@ -30,7 +31,7 @@ function Item_view(props)
         
             <div className='Price_view'> <p className='Item_price'>GBP {product_price}</p> 
                 <div className='Content_btns'> 
-                <button className='Add_cart_btn hov'>Add to cart</button>
+                <button className='Add_cart_btn hov' onClick={props.add}>Add to cart</button>
                 <button className='Buy_btn hov'>Buy</button> 
                 </div> 
             </div>

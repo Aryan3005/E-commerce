@@ -25,7 +25,11 @@
     max-width: 90px;
     margin-right: 40px;
     margin-top: 60px;
-  
+  }
+  .img_nav{
+    min-height: 10px;
+    min-width: 60px;
+
   }
   .User_image{
     max-height: 40px;
@@ -51,7 +55,7 @@
       margin-right: 0px;
     }
     .Cart_image{
-      margin-right: 10px;
+      margin-right: 0px;
     }
   
   }

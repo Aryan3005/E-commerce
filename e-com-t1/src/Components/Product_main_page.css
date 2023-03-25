@@ -1,16 +1,17 @@
 
 .p_Image{
-    max-height: 35rem;
-    max-width: 30rem;
+    max-height: 65rem;
+    max-width: 65rem;
+    min-height: 10rem;
+    min-width: 10rem;
     margin-top: 100px;
     object-fit: cover;
     margin-left: 2rem;
-    margin-right: 50px;
 }
 
 .indi_p_page{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .indin_p_drop_list{
@@ -21,13 +22,16 @@
 
 .indi_p_details{
     margin-top: 8rem;
+
 }
 
 @media only screen and (max-width: 650px) {
 
   .indi_p_page{
     flex-direction: column;
-    justify-content: space-around; }
+    justify-content: space-around;
+ }
+ .p_Image{margin-right: 2rem;}
 
     .indi_p_details{
         margin-top: 1rem;
@@ -36,3 +40,7 @@
         margin-left: 2rem;
     }
   }
+
+.indi_p_price:hover{
+    text-decoration: underline;
+}
